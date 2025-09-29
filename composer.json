@@ -1,5 +1,5 @@
 {
-  "name": "vera/zinzinsducommit",
+  "name": "balamini/zinzinsducommit",
   "autoload": {
     "psr-4": {
       "App\\": "src/",
