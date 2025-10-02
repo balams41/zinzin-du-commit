@@ -55,4 +55,5 @@ class SessionController extends AbstractController
         session_destroy();
         $this->redirectToRoute('/', 200);
     }
-}
+
+    }
