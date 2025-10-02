@@ -1,12 +1,12 @@
 <?php
 require_once(__DIR__ . "/partial/head.view.php");
 ?>
-<h1>Création d'un commit</h1>
+<h1>Modification d'un commit</h1>
 <form method="POST">
     <div class="container">
         <div class="form-group">
             <label for="commit" class="form-label">Commit moi ça !</label>
-            <textarea class="form-control" id="commit" name="commit" style="height: 100px"></textarea>
+            <textarea class="form-control" id="commit" name="commit" style="height: 100px"><?= $myCommit->getText(); ?></textarea>
             <?php 
             if(isset($this->arrayError['commit'])){
                 ?>
@@ -15,7 +15,7 @@ require_once(__DIR__ . "/partial/head.view.php");
             }
             ?>
         </div>
-        <button type="submit" name="addCommit" class="btn btn-success mt-5">Commiter !</button>
+        <button type="submit" name="editCommit" class="btn btn-success mt-5">Commiter !</button>
     </div>
 </form>
 <?php
