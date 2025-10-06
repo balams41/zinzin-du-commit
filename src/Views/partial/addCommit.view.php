@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/partials/head.view.php");
+require_once(__DIR__ . "/partial/head.view.php");
 ?>
 <h1>Création d'un commit</h1>
 <form method="POST">
@@ -19,4 +19,4 @@ require_once(__DIR__ . "/partials/head.view.php");
     </div>
 </form>
 <?php
-require_once(__DIR__ . "/partials/footer.view.php");
+require_once(__DIR__ . "/partial/footer.view.php");

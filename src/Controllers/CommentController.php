@@ -38,12 +38,30 @@ class CommentController extends AbstractController
                 $this->RedirectToRoute('/', 302);
             }
             
-
-
             //Si la personne clique sur le submit alors vérifier les erreurs puis créer une méthode update pour envoyer la modification
         }else{
             $this->RedirectToRoute('/', 302);
         }
         
+    }
+
+    public function deleteComment()
+    {
+        if(isset($_POST['id'])){
+            $id = htmlspecialchars($_POST['id']);
+            $comment = new Comment($id, null, null, null, null, null);
+            $myComment = $comment->getCommentById();
+
+            //Je veux que le commentaire existe et que ce soit la personne qui a créer le commentaire ou alors que ce soit un admin
+            if(($myComment && $_SESSION['user']['id_user'] === $myComment->getIdUser()) || ($myComment && $_SESSION['user']['id_role'] === 1)){
+                $myComment->deleteComment();
+                $this->redirectToRoute('/commit?id=' . $myComment->getIdCommit() , 200);
+
+            }else{
+                $this->redirectToRoute('/', 302);
+            }
+        }else{
+            $this->redirectToRoute('/404', 404);
+        }
     }
 }

@@ -18,6 +18,7 @@ require_once(__DIR__ . "/partial/head.view.php");
         <button type="submit" name="editComment" class="btn btn-warning">Modifier !</button>
     </div>
 </form>
+button est là juste ici ❤❤🤣🤣😂🙌🤦‍♀️🎶🤳🎂🐱‍👤🐱‍🏍🐱‍🐉🐱‍👓🐱‍💻🐱‍🚀
 <?php
 require_once(__DIR__ . "/partial/footer.view.php");
 ?>
